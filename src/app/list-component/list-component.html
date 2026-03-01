@@ -7,14 +7,21 @@
 </ul>
 
 <ol>
-    @for(xyz of presidents;track xyz){
-        <li>{{xyz}}</li>
+    <!-- loops through the presidents array -->
+    <!-- xyz is each item, track xyz helps Angular track changes -->
+    @for (xyz of presidents; track xyz) {
+
+        <!-- creates one <li> per president -->
+        <li>{{ xyz }}</li> <!-- displays the value -->
     }
 </ol>
 
 <ul>
+  <!-- repeats this <li> for each object in myPresidents -->
   <li *ngFor="let x of myPresidents">
-    {{ x.name }} {{ x.term }}
+
+    {{ x.name }} {{ x.term }} <!-- shows name and term -->
+
   </li>
 </ul>
 
